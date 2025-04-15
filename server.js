@@ -1,5 +1,7 @@
 const express = require("express");
-const { default: User } = require("./model/userModel");
+const { User } = require("./model/userModel");
+
+const app = express()
 
 //middleware
 app.use(express.json());
@@ -48,4 +50,5 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.listen(8080).then(console.log("Server is runing in localhost:8080"));
+app.listen(8080)
+console.log("Server is runing in localhost:8080")
